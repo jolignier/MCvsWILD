@@ -79,6 +79,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7W-cg-TaB" userLabel="backpack_btn">
                                 <rect key="frame" x="20" y="44" width="80" height="80"/>
                                 <state key="normal" backgroundImage="backpack"/>
+                                <connections>
+                                    <segue destination="pmS-Cc-xg1" kind="show" id="SXE-q5-gUt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgU-yN-lg2" userLabel="name_label">
                                 <rect key="frame" x="155.33333333333334" y="44" width="64.666666666666657" height="33.666666666666657"/>
@@ -92,16 +95,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="svC-Zk-pOs" userLabel="columns_stats">
-                                <rect key="frame" x="0.0" y="156.33333333333334" width="375" height="130.00000000000003"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="svC-Zk-pOs" userLabel="columns_stats">
+                                <rect key="frame" x="0.0" y="156.33333333333337" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JAa-jI-Hj9" userLabel="left_column">
                                         <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="130"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="center" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6fY-Dw-Qac" userLabel="health_stats">
+                                            <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6fY-Dw-Qac" userLabel="health_stats">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="jJn-Hc-qsi">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="t3F-t2-MLz">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BHo-gX-veU" userLabel="food_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
@@ -109,85 +113,215 @@
                                                         <color key="tintColor" systemColor="systemRedColor"/>
                                                     </progressView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="t3F-t2-MLz" firstAttribute="leading" secondItem="6fY-Dw-Qac" secondAttribute="leading" constant="15" id="KJH-P6-3gE"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="center" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fA5-rj-LWB" userLabel="food_stats">
+                                            <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fA5-rj-LWB" userLabel="food_stats">
                                                 <rect key="frame" x="0.0" y="80" width="187.66666666666666" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="7i5-91-hmN">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="BvL-ik-3tV">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CKR-se-dK0" userLabel="food_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
-                                                        <rect key="frame" x="56" y="22.999999999999972" width="131.66666666666666" height="4"/>
+                                                        <rect key="frame" x="56" y="23" width="131.66666666666666" height="4"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     </progressView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="BvL-ik-3tV" firstAttribute="leading" secondItem="fA5-rj-LWB" secondAttribute="leading" constant="15" id="P7g-0n-hT3"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WbI-LC-Zi0" userLabel="right_column">
                                         <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="130"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="center" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LZq-uw-Nag" userLabel="fear_stats">
+                                            <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LZq-uw-Nag" userLabel="fear_stats">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="50"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="SSZ-BV-KIB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="50"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="GEr-cH-TIb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4hB-T0-sCZ" userLabel="fear_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
-                                                        <rect key="frame" x="55.666666666666686" y="23" width="131.66666666666666" height="4"/>
+                                                        <rect key="frame" x="56" y="23" width="131.33333333333334" height="4"/>
+                                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="GEr-cH-TIb" firstAttribute="leading" secondItem="LZq-uw-Nag" secondAttribute="leading" id="tdh-0b-OMF"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-J2-lW9" userLabel="sleep_stats">
+                                                <rect key="frame" x="0.0" y="80" width="187.33333333333334" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="Z1C-wc-96d">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6ZA-ga-waC" userLabel="sleep_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="56" y="23" width="131.33333333333334" height="4"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Z1C-wc-96d" firstAttribute="leading" secondItem="EEc-J2-lW9" secondAttribute="leading" id="nTf-nE-TfS"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JAa-jI-Hj9" firstAttribute="top" secondItem="svC-Zk-pOs" secondAttribute="top" id="6hG-2X-DHl"/>
+                                    <constraint firstAttribute="height" constant="130" id="Z7B-pV-NGF"/>
+                                    <constraint firstAttribute="trailing" secondItem="WbI-LC-Zi0" secondAttribute="trailing" id="cS2-On-ThB"/>
+                                    <constraint firstAttribute="bottom" secondItem="JAa-jI-Hj9" secondAttribute="bottom" id="evh-AG-yds"/>
+                                    <constraint firstItem="WbI-LC-Zi0" firstAttribute="leading" secondItem="JAa-jI-Hj9" secondAttribute="trailing" id="gbt-hn-oYG"/>
+                                    <constraint firstItem="WbI-LC-Zi0" firstAttribute="top" secondItem="svC-Zk-pOs" secondAttribute="top" id="mSS-ye-irX"/>
+                                    <constraint firstAttribute="trailing" secondItem="WbI-LC-Zi0" secondAttribute="trailing" id="rce-w1-LMM"/>
+                                    <constraint firstAttribute="bottom" secondItem="WbI-LC-Zi0" secondAttribute="bottom" id="tJv-Dn-wEu"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous vous reveillez pres d'un crash d'avion... En reprenant doucement vos esprits vous appelez a l'aide... Pas de reponse..." textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-8f-uUr">
+                                <rect key="frame" x="20" y="311.33333333333331" width="335" height="85.666666666666686"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0YP-ed-ACp" userLabel="columns_choice">
+                                <rect key="frame" x="-47.666666666666657" y="422" width="407.66666666666663" height="336"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Z8-GvI" userLabel="left_column">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="336"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choix n°1" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-SW-rZK">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="39.333333333333336"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que vais-je devenir ?" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHK-Ab-r35" userLabel="choice1">
+                                                <rect key="frame" x="0.0" y="59.333333333333314" width="196.33333333333334" height="39.333333333333343"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="cff-QE-bQp" userLabel="health_stats">
+                                                <rect key="frame" x="0.0" y="118.66666666666661" width="196.33333333333334" height="39.333333333333329"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-bQ-4qH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ewi-Zn-Hn7" userLabel="health_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="73.333333333333314" y="17.666666666666742" width="123" height="4"/>
+                                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="dRs-GW-9Vr" userLabel="food_stats">
+                                                <rect key="frame" x="0.0" y="178" width="196.33333333333334" height="39.333333333333343"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="WDO-bR-Ff6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X9X-ip-2DE" userLabel="food_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="72.333333333333314" y="17.666666666666629" width="124" height="4"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="227-5V-75T" userLabel="fear_stats">
+                                                <rect key="frame" x="0.0" y="237.3333333333334" width="196.33333333333334" height="39.333333333333343"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-CM-c3u">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-Pa-PbY" userLabel="fear_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="72.333333333333314" y="17.666666666666629" width="124" height="4"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="center" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-J2-lW9" userLabel="sleep_stats">
-                                                <rect key="frame" x="0.0" y="80" width="187.33333333333334" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ezZ-aY-Qpb" userLabel="sleep_stats">
+                                                <rect key="frame" x="0.0" y="296.66666666666663" width="196.33333333333334" height="39.333333333333314"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="TED-c4-nHc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="50"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-eV-t9Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6ZA-ga-waC" userLabel="sleep_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
-                                                        <rect key="frame" x="55.666666666666686" y="22.999999999999972" width="131.66666666666666" height="4"/>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-pX-P4c" userLabel="sleep_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="72.333333333333314" y="17.666666666666742" width="124" height="4"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="Z7B-pV-NGF"/>
-                                </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous vous reveillez pres d'un crash d'avion... En reprenant doucement vos esprits vous appelez a l'aide... Pas de reponse..." textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-8f-uUr">
-                                <rect key="frame" x="20" y="311.33333333333331" width="335" height="86.333333333333314"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0YP-ed-ACp" userLabel="columns_choice">
-                                <rect key="frame" x="0.0" y="422.66666666666674" width="375" height="335.33333333333326"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Z8-GvI" userLabel="left_column">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="20.333333333333332"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" id="cX1-q0-M27" userLabel="right_column">
+                                        <rect key="frame" x="211.33333333333331" y="0.0" width="196.33333333333331" height="336"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choix n°1" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXg-SW-rZK">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choix n°1" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fnz-QB-x8Y">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.33333333333334" height="39.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GWN-Fx-kg4" userLabel="right_column">
-                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="20.333333333333332"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choix n°2" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYH-3f-FjF">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAAAAAAAAhhhhhhh !!!" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgk-7d-HNC" userLabel="Choix2">
+                                                <rect key="frame" x="0.0" y="59.333333333333314" width="196.33333333333334" height="39.333333333333343"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="08d-2T-NyW" userLabel="health_stats">
+                                                <rect key="frame" x="0.0" y="118.66666666666661" width="196.33333333333334" height="39.333333333333329"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="ZX2-cM-lbz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mxr-u5-adt" userLabel="health_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="73.333333333333343" y="17.666666666666742" width="123" height="4"/>
+                                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Aa1-08-hW4" userLabel="food_stats">
+                                                <rect key="frame" x="0.0" y="178" width="196.33333333333334" height="39.333333333333343"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="YrG-vw-Mos">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9B3-4o-e78" userLabel="food_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="72.333333333333343" y="17.666666666666629" width="124" height="4"/>
+                                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="tpY-fT-vXW" userLabel="fear_stats">
+                                                <rect key="frame" x="0.0" y="237.3333333333334" width="196.33333333333334" height="39.333333333333343"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Q-IA-f0y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wP6-XR-kRR" userLabel="fear_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="72.333333333333343" y="17.666666666666629" width="124" height="4"/>
+                                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LuJ-8l-kRk" userLabel="sleep_stats">
+                                                <rect key="frame" x="0.0" y="296.66666666666663" width="196.33333333333334" height="39.333333333333314"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="fmP-oH-tm2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="39.333333333333336"/>
+                                                    </imageView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7GG-bY-feS" userLabel="sleep_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                        <rect key="frame" x="72.333333333333343" y="17.666666666666742" width="124" height="4"/>
+                                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <viewLayoutGuide key="safeArea" id="8qh-w2-NWA"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -200,11 +334,10 @@
                             <constraint firstItem="PYj-Lx-K09" firstAttribute="centerX" secondItem="may-2C-cF6" secondAttribute="centerX" id="5Ls-3C-lTV"/>
                             <constraint firstItem="Akc-AM-nDc" firstAttribute="bottom" secondItem="0YP-ed-ACp" secondAttribute="bottom" constant="20" id="69P-SF-aJ6"/>
                             <constraint firstItem="0YP-ed-ACp" firstAttribute="centerX" secondItem="may-2C-cF6" secondAttribute="centerX" id="6YG-mZ-vC3"/>
-                            <constraint firstItem="0YP-ed-ACp" firstAttribute="leading" secondItem="may-2C-cF6" secondAttribute="leading" id="9al-Em-yKN"/>
                             <constraint firstItem="tIM-8f-uUr" firstAttribute="leading" secondItem="may-2C-cF6" secondAttribute="leading" constant="20" id="F17-5w-ppL"/>
                             <constraint firstItem="NgU-yN-lg2" firstAttribute="top" secondItem="Akc-AM-nDc" secondAttribute="top" id="LGF-r1-Sz4"/>
                             <constraint firstItem="PYj-Lx-K09" firstAttribute="centerY" secondItem="may-2C-cF6" secondAttribute="centerY" id="M0f-zF-f1g"/>
-                            <constraint firstAttribute="trailing" secondItem="0YP-ed-ACp" secondAttribute="trailing" id="VaO-Po-1ec"/>
+                            <constraint firstAttribute="trailing" secondItem="0YP-ed-ACp" secondAttribute="trailing" constant="15" id="VaO-Po-1ec"/>
                             <constraint firstItem="0yg-fZ-4z2" firstAttribute="top" secondItem="NgU-yN-lg2" secondAttribute="bottom" constant="15" id="bKi-vO-cZo"/>
                             <constraint firstItem="Rmd-z5-roA" firstAttribute="top" secondItem="Akc-AM-nDc" secondAttribute="top" id="doH-Kt-Ahg"/>
                             <constraint firstItem="g7W-cg-TaB" firstAttribute="leading" secondItem="Akc-AM-nDc" secondAttribute="leading" constant="20" id="gKR-8x-NY3"/>
@@ -225,14 +358,146 @@
             </objects>
             <point key="canvasLocation" x="1028" y="103.44827586206897"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="8gg-e6-E6r">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="pmS-Cc-xg1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KYU-by-uhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="bckGndInventory" translatesAutoresizingMaskIntoConstraints="NO" id="Hi9-kI-oim">
+                                <rect key="frame" x="-551.66666666666663" y="0.0" width="1478.3333333333333" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B65-xF-utb" userLabel="head">
+                                <rect key="frame" x="20" y="44" width="335" height="92"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrR-m3-nAk" userLabel="back">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
+                                        <state key="normal" image="retour"/>
+                                        <connections>
+                                            <segue destination="7WZ-p6-fxf" kind="show" id="DoW-og-WGa"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wMV-8V-3V9" userLabel="info_player">
+                                        <rect key="frame" x="92" y="0.0" width="161" height="92"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLL-oR-Z7o">
+                                                <rect key="frame" x="48.33333333333335" y="0.0" width="64.666666666666686" height="58.333333333333336"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-yn-Ndp">
+                                                <rect key="frame" x="35.33333333333335" y="58.333333333333329" width="90.666666666666686" height="33.666666666666671"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-zs-fAJ" userLabel="close">
+                                        <rect key="frame" x="253" y="0.0" width="82" height="92"/>
+                                        <state key="normal" image="croix"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Kba-pL-nIb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uug-wM-03I" userLabel="items">
+                                <rect key="frame" x="20" y="156" width="335" height="602"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fx3-jR-OhS">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="602"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-mT-bBj">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="200.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rk4-Hh-ELX">
+                                                <rect key="frame" x="0.0" y="200.66666666666669" width="111.66666666666667" height="200.66666666666669"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHg-UG-Ahh">
+                                                <rect key="frame" x="0.0" y="401.33333333333337" width="111.66666666666667" height="200.66666666666663"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e8O-ez-Zvf">
+                                        <rect key="frame" x="111.66666666666666" y="0.0" width="111.66666666666666" height="602"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpV-Qh-yqN">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="200.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYo-dO-NqJ">
+                                                <rect key="frame" x="0.0" y="200.66666666666669" width="111.66666666666667" height="200.66666666666669"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp1-Db-naI">
+                                                <rect key="frame" x="0.0" y="401.33333333333337" width="111.66666666666667" height="200.66666666666663"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xpd-YH-vuC">
+                                        <rect key="frame" x="223.33333333333334" y="0.0" width="111.66666666666666" height="602"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFF-EL-Ffw">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="200.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Off-5b-MhA">
+                                                <rect key="frame" x="0.0" y="200.66666666666669" width="111.66666666666667" height="200.66666666666669"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g9-Ht-Sn5">
+                                                <rect key="frame" x="0.0" y="401.33333333333337" width="111.66666666666667" height="200.66666666666663"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w9p-49-ogN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Hi9-kI-oim" secondAttribute="bottom" id="8EE-J5-nj4"/>
+                            <constraint firstItem="Hi9-kI-oim" firstAttribute="centerX" secondItem="KYU-by-uhZ" secondAttribute="centerX" id="Bov-GK-zXK"/>
+                            <constraint firstItem="Uug-wM-03I" firstAttribute="leading" secondItem="w9p-49-ogN" secondAttribute="leading" constant="20" id="Cye-1O-eoH"/>
+                            <constraint firstItem="Hi9-kI-oim" firstAttribute="top" secondItem="KYU-by-uhZ" secondAttribute="top" id="FVP-Fe-K6X"/>
+                            <constraint firstItem="w9p-49-ogN" firstAttribute="trailing" secondItem="Uug-wM-03I" secondAttribute="trailing" constant="20" id="SLr-bI-H1M"/>
+                            <constraint firstItem="w9p-49-ogN" firstAttribute="bottom" secondItem="Uug-wM-03I" secondAttribute="bottom" constant="20" id="aTd-Ac-FxQ"/>
+                            <constraint firstItem="B65-xF-utb" firstAttribute="top" secondItem="w9p-49-ogN" secondAttribute="top" id="fAy-Sx-cpv"/>
+                            <constraint firstItem="Hi9-kI-oim" firstAttribute="centerY" secondItem="KYU-by-uhZ" secondAttribute="centerY" id="shS-hn-ouS"/>
+                            <constraint firstItem="w9p-49-ogN" firstAttribute="trailing" secondItem="B65-xF-utb" secondAttribute="trailing" constant="20" id="stT-6Q-yUf"/>
+                            <constraint firstItem="B65-xF-utb" firstAttribute="leading" secondItem="w9p-49-ogN" secondAttribute="leading" constant="20" id="wjT-kl-TNK"/>
+                            <constraint firstItem="Uug-wM-03I" firstAttribute="top" secondItem="B65-xF-utb" secondAttribute="bottom" constant="20" id="yDP-pz-lIz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ep-Zy-tQ3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hs5-B4-0Cv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799" y="109"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DoW-og-WGa"/>
+        <segue reference="Kba-pL-nIb"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="backpack" width="80" height="80"/>
+        <image name="bckGndInventory" width="1478" height="924"/>
         <image name="croix" width="82" height="82"/>
         <image name="ghost" width="50" height="50"/>
         <image name="hearth" width="50" height="50"/>
         <image name="meat" width="50" height="50"/>
         <image name="menu_bg" width="1920" height="1080"/>
+        <image name="retour" width="92" height="92"/>
         <image name="sleep" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
