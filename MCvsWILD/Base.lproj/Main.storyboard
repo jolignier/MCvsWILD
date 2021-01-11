@@ -340,8 +340,14 @@
                         <outlet property="choice1_food" destination="ICZ-pt-Xcm" id="S28-Uo-h6d"/>
                         <outlet property="choice1_health" destination="vfM-61-tRb" id="GlA-td-aLa"/>
                         <outlet property="choice1_sleep" destination="ytO-xy-x8b" id="MNa-KJ-RW3"/>
+                        <outlet property="choice2" destination="DOu-pu-E9d" id="ZsN-IR-7eH"/>
+                        <outlet property="choice2_fear" destination="XxF-OY-iDX" id="tyn-nf-pp5"/>
+                        <outlet property="choice2_food" destination="PlO-ZP-2dK" id="pCs-g0-Dc3"/>
+                        <outlet property="choice2_health" destination="1Bp-ho-zjV" id="Gni-gv-tfs"/>
+                        <outlet property="choice2_sleep" destination="EYf-wT-g20" id="oGM-2u-N0X"/>
                         <outlet property="event_description" destination="tIM-8f-uUr" id="axp-JY-RQd"/>
                         <outlet property="player_name" destination="NgU-yN-lg2" id="sdv-6Z-gin"/>
+                        <outlet property="gameView" destination="may-2C-cF6" id="UHY-HE-6it"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fks-fu-wA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
