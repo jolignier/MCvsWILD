@@ -27,10 +27,8 @@ class Character {
         var text = ""
         if let data = NSDataAsset(name: "ndm")?.data {
             text = String(data: data, encoding: .utf8)!
-            print(text)
         }
         let lines = text.split(separator: "\n")
-        print(lines)
         name = String(lines.randomElement()!)
 
         health = MAXSTAT / 2

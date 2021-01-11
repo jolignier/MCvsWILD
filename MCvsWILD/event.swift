@@ -40,7 +40,22 @@ class Event {
             print(text)
         }
         let lines = text.split(separator: "\n")
-        print(lines)
+        fillData(lines: lines)
+        
+    }
+    
+    func newEvent() -> () {
+        let numEvent = Int.random(in: 0...63)
+        var text = ""
+        if let data = NSDataAsset(name: "event" + String(numEvent))?.data {
+            text = String(data: data, encoding: .utf8)!
+            print(text)
+        }
+        let lines = text.split(separator: "\n")
+        fillData(lines: lines)
+    }
+    
+    func fillData(lines: Array<Substring>) {
         
         for item in lines {
             let separate = item.split(separator: ":")
@@ -92,16 +107,6 @@ class Event {
         }
     }
     
-    func newEvent() -> () {
-        let numEvent = Int.random(in: 0...63)
-        var text = ""
-        if let data = NSDataAsset(name: "event" + String(numEvent))?.data {
-            text = String(data: data, encoding: .utf8)!
-            print(text)
-        }
-        let line = text.split(separator: "\n")
-        print(line)
-    }
     
     
 }

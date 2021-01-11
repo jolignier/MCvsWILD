@@ -346,8 +346,9 @@
                         <outlet property="choice2_health" destination="1Bp-ho-zjV" id="Gni-gv-tfs"/>
                         <outlet property="choice2_sleep" destination="EYf-wT-g20" id="oGM-2u-N0X"/>
                         <outlet property="event_description" destination="tIM-8f-uUr" id="axp-JY-RQd"/>
-                        <outlet property="player_name" destination="NgU-yN-lg2" id="sdv-6Z-gin"/>
                         <outlet property="gameView" destination="may-2C-cF6" id="UHY-HE-6it"/>
+                        <outlet property="player_name" destination="NgU-yN-lg2" id="sdv-6Z-gin"/>
+                        <outlet property="score" destination="0yg-fZ-4z2" id="2lr-0t-P1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fks-fu-wA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -482,7 +483,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SXE-q5-gUt"/>
         <segue reference="DoW-og-WGa"/>
         <segue reference="8UA-yO-Cti"/>
     </inferredMetricsTieBreakers>

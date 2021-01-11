@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     
 
     @IBOutlet weak var player_name: UILabel!
+    @IBOutlet weak var score: UILabel!
     @IBOutlet weak var choice1: UIStackView!
     @IBOutlet weak var choice1_description: UILabel!
     @IBOutlet weak var choice1_health: StatBar!
@@ -35,9 +36,13 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let main = Character()
+        var main = Character()
+        var current = Event(pathEvent: "eventScenario")
+        
         player_name.text = main.getName()
-        print(main.getName())
+        score.text = String(0)
+        
+        
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(self.clickOnChoice1(_:)))
         self.choice1.addGestureRecognizer(tap1)
         
@@ -49,10 +54,15 @@ class GameViewController: UIViewController {
 
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
         print("choice 1")
+        
     }
     
     @objc func clickOnChoice2(_ sender:UITapGestureRecognizer) {
         print("choice 2")
+    }
+    
+    func changeEvent(current: Event) {
+        
     }
 
     /*
