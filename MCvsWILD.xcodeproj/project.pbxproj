@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		81825CE825A4B21C0029A060 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81825CE725A4B21C0029A060 /* gameViewController.swift */; };
 		81825CED25A4C44A0029A060 /* statBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81825CEC25A4C44A0029A060 /* statBar.swift */; };
+		818C30A625AC68A00017F886 /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818C30A425AC68A00017F886 /* Loot.swift */; };
+		818C30A725AC68A00017F886 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818C30A525AC68A00017F886 /* Character.swift */; };
 		819AEFC325A70C1A00C23A58 /* event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819AEFC225A70C1A00C23A58 /* event.swift */; };
 		81AB951325A4A3170007F2BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB951225A4A3170007F2BE /* AppDelegate.swift */; };
 		81AB951525A4A3170007F2BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB951425A4A3170007F2BE /* SceneDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		81825CE725A4B21C0029A060 /* gameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
 		81825CEC25A4C44A0029A060 /* statBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statBar.swift; sourceTree = "<group>"; };
+		818C30A425AC68A00017F886 /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
+		818C30A525AC68A00017F886 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		819AEFC225A70C1A00C23A58 /* event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = event.swift; sourceTree = "<group>"; };
 		81AB950F25A4A3170007F2BE /* MCvsWILD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCvsWILD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB951225A4A3170007F2BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				81AB951825A4A3170007F2BE /* Main.storyboard */,
 				81825CEC25A4C44A0029A060 /* statBar.swift */,
 				81825CE725A4B21C0029A060 /* gameViewController.swift */,
+				818C30A525AC68A00017F886 /* Character.swift */,
+				818C30A425AC68A00017F886 /* Loot.swift */,
 				81AB951B25A4A3180007F2BE /* Assets.xcassets */,
 				81AB951D25A4A3180007F2BE /* LaunchScreen.storyboard */,
 				81AB952025A4A3180007F2BE /* Info.plist */,
@@ -271,8 +277,10 @@
 				81825CE825A4B21C0029A060 /* gameViewController.swift in Sources */,
 				819AEFC325A70C1A00C23A58 /* event.swift in Sources */,
 				81AB951725A4A3170007F2BE /* ViewController.swift in Sources */,
+				818C30A625AC68A00017F886 /* Loot.swift in Sources */,
 				81AB951325A4A3170007F2BE /* AppDelegate.swift in Sources */,
 				81AB951525A4A3170007F2BE /* SceneDelegate.swift in Sources */,
+				818C30A725AC68A00017F886 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

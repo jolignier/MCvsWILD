@@ -341,6 +341,7 @@
                         <outlet property="choice1_health" destination="vfM-61-tRb" id="GlA-td-aLa"/>
                         <outlet property="choice1_sleep" destination="ytO-xy-x8b" id="MNa-KJ-RW3"/>
                         <outlet property="event_description" destination="tIM-8f-uUr" id="axp-JY-RQd"/>
+                        <outlet property="player_name" destination="NgU-yN-lg2" id="sdv-6Z-gin"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fks-fu-wA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -368,17 +369,17 @@
                                             <segue destination="7WZ-p6-fxf" kind="show" id="DoW-og-WGa"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wMV-8V-3V9" userLabel="info_player">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wMV-8V-3V9" userLabel="info_player">
                                         <rect key="frame" x="92" y="0.0" width="161" height="92"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLL-oR-Z7o">
-                                                <rect key="frame" x="48.33333333333335" y="0.0" width="64.666666666666686" height="58.333333333333336"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLL-oR-Z7o">
+                                                <rect key="frame" x="48.33333333333335" y="0.0" width="64.666666666666686" height="46"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-yn-Ndp">
-                                                <rect key="frame" x="35.33333333333335" y="58.333333333333329" width="90.666666666666686" height="33.666666666666671"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-yn-Ndp">
+                                                <rect key="frame" x="35.33333333333335" y="46" width="90.666666666666686" height="46"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -475,7 +476,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HjN-aK-Mxj"/>
+        <segue reference="SXE-q5-gUt"/>
+        <segue reference="DoW-og-WGa"/>
         <segue reference="8UA-yO-Cti"/>
     </inferredMetricsTieBreakers>
     <resources>

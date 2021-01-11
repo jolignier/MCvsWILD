@@ -11,6 +11,7 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var event_description: UILabel!
     
+    @IBOutlet weak var player_name: UILabel!
     @IBOutlet weak var choice1_description: UILabel!
     @IBOutlet weak var choice1_health: StatBar!
     @IBOutlet weak var choice1_food: StatBar!
@@ -22,6 +23,10 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let main = Character()
+        player_name.text = main.getName()
+        print(main.getName())
+        
         // Do any additional setup after loading the view.
     }
     
