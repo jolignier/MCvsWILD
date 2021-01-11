@@ -11,11 +11,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var play_btn: UIButton!
     
+    @IBAction func play_clk(_ sender: UIButton) {
+        let current = Event(pathEvent: "eventScenario")
+        print(current)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
 }
+
 

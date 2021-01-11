@@ -9,11 +9,22 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var event_description: UILabel!
+    
+    @IBOutlet weak var choice1_description: UILabel!
+    @IBOutlet weak var choice1_health: StatBar!
+    @IBOutlet weak var choice1_food: StatBar!
+    @IBOutlet weak var choice1_fear: StatBar!
+    @IBOutlet weak var choice1_sleep: StatBar!
+    
+    @IBOutlet weak var choice1: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
