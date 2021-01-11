@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -102,7 +102,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="zcp-un-Kjv">
                                                         <rect key="frame" x="0.0" y="12.666666666666657" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y5t-Zb-qRY" userLabel="health_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y5t-Zb-qRY" userLabel="health_bar">
                                                         <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemRedColor"/>
                                                     </progressView>
@@ -115,7 +115,7 @@
                                                         <rect key="frame" x="0.0" y="12.666666666666657" width="50" height="50"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cO2-Xw-fSs" userLabel="food_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cO2-Xw-fSs" userLabel="food_bar">
                                                         <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     </progressView>
@@ -132,7 +132,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-0T-9Nu">
                                                         <rect key="frame" x="0.0" y="12.666666666666657" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bRM-oN-2a4" userLabel="fear_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bRM-oN-2a4" userLabel="fear_bar">
                                                         <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor"/>
                                                     </progressView>
@@ -144,7 +144,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="ixp-nK-CZH">
                                                         <rect key="frame" x="0.0" y="12.666666666666657" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qHq-Ra-O4R" userLabel="sleep_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qHq-Ra-O4R" userLabel="sleep_bar">
                                                         <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                     </progressView>
@@ -193,7 +193,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="KZE-qK-klm">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vfM-61-tRb" userLabel="health_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vfM-61-tRb" userLabel="health_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemRedColor"/>
                                                     </progressView>
@@ -205,7 +205,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="ucl-6g-3vb">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ICZ-pt-Xcm" userLabel="food_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ICZ-pt-Xcm" userLabel="food_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     </progressView>
@@ -217,7 +217,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="OwH-Lw-z9x">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U5l-WV-FPT" userLabel="fear_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U5l-WV-FPT" userLabel="fear_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor"/>
                                                     </progressView>
@@ -229,7 +229,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="OEq-Yd-NT2">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ytO-xy-x8b" userLabel="sleep_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ytO-xy-x8b" userLabel="sleep_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                     </progressView>
@@ -258,7 +258,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="rGg-fW-YJJ">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Bp-ho-zjV" userLabel="health_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Bp-ho-zjV" userLabel="health_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemRedColor"/>
                                                     </progressView>
@@ -270,7 +270,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="1DP-AF-QNC">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-ZP-2dK" userLabel="food_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-ZP-2dK" userLabel="food_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     </progressView>
@@ -282,7 +282,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="ksQ-9i-pnu">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XxF-OY-iDX" userLabel="fear_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XxF-OY-iDX" userLabel="fear_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor"/>
                                                     </progressView>
@@ -294,7 +294,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="jlY-JM-MDO">
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-wT-g20" userLabel="sleep_bar" customClass="StatBar" customModule="MCvsWILD" customModuleProvider="target">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-wT-g20" userLabel="sleep_bar">
                                                         <rect key="frame" x="56" y="26" width="104" height="4"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                                     </progressView>
@@ -348,7 +348,11 @@
                         <outlet property="choice2_sleep" destination="EYf-wT-g20" id="oGM-2u-N0X"/>
                         <outlet property="event_description" destination="tIM-8f-uUr" id="axp-JY-RQd"/>
                         <outlet property="gameView" destination="may-2C-cF6" id="UHY-HE-6it"/>
+                        <outlet property="player_fear" destination="bRM-oN-2a4" id="3gI-YG-YGQ"/>
+                        <outlet property="player_food" destination="cO2-Xw-fSs" id="liF-PO-SGe"/>
+                        <outlet property="player_health" destination="y5t-Zb-qRY" id="YLR-AT-XaF"/>
                         <outlet property="player_name" destination="NgU-yN-lg2" id="sdv-6Z-gin"/>
+                        <outlet property="player_sleep" destination="qHq-Ra-O4R" id="ByE-XH-wKM"/>
                         <outlet property="score" destination="0yg-fZ-4z2" id="2lr-0t-P1h"/>
                     </connections>
                 </viewController>
@@ -484,6 +488,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="SXE-q5-gUt"/>
         <segue reference="DoW-og-WGa"/>
         <segue reference="8UA-yO-Cti"/>
     </inferredMetricsTieBreakers>

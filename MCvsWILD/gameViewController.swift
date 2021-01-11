@@ -17,6 +17,11 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var player_name: UILabel!
     @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var player_health: UIProgressView!
+    @IBOutlet weak var player_food: UIProgressView!
+    @IBOutlet weak var player_fear: UIProgressView!
+    @IBOutlet weak var player_sleep: UIProgressView!
+    
     
     @IBOutlet weak var choice1: UIStackView!
     @IBOutlet weak var choice1_description: UILabel!
@@ -33,13 +38,14 @@ class GameViewController: UIViewController {
     @IBOutlet weak var choice2_fear: StatBar!
     @IBOutlet weak var choice2_sleep: StatBar!
     
+    var main = Character()
+    var current = Event(pathEvent: "eventScenario")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var main = Character()
-        var current = Event(pathEvent: "eventScenario")
+
         changeViewEvent(current: current)
         player_name.text = main.getName()
         score.text = String(0)
@@ -56,29 +62,44 @@ class GameViewController: UIViewController {
 
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
         print("choice 1")
-        changeViewEvent(current: Event(pathEvent: "event8"))
+        main.myChoice(choice: current.getChoice1())
+        current.newEvent()
+        changeViewEvent(current: current)
+        
     }
     
     @objc func clickOnChoice2(_ sender:UITapGestureRecognizer) {
         print("choice 2")
+        main.myChoice(choice: current.getChoice2())
+        current.newEvent()
+        changeViewEvent(current: current)
+        
     }
     
+    
     func changeViewEvent(current: Event) {
+        
+        score.text = String(main.score)
+        player_health.setProgress(Float(main.health)/20, animated: true)
+        player_food.setProgress(Float(main.food)/20, animated: true)
+        player_fear.setProgress(Float(main.fear)/20, animated: true)
+        player_sleep.setProgress(Float(main.sleep)/20, animated: true)
+        
         event_description.text = current.getDescription()
         
-        choice1_description.text = current.getDescription1()
-        choice2_description.text = current.getDescription2()
+        choice1_description.text = current.getChoice1().getTitle()
+        choice2_description.text = current.getChoice2().getTitle()
         
-        choice1_health.setProgress(Float(current.choice1Health), animated: true)
-        choice1_food.setProgress(Float(current.choice1Food), animated: true)
-        choice1_fear.setProgress(Float(current.choice1Fear), animated: true)
-        choice1_sleep.setProgress(Float(current.choice1Sleep), animated: true)
+        choice1_health.setProgress(Float(abs(current.getChoice1().getHealth()))/10, animated: true)
+        choice1_food.setProgress(Float(abs(current.getChoice1().getFood()))/10, animated: true)
+        choice1_fear.setProgress(Float(abs(current.getChoice1().getFear()))/10, animated: true)
+        choice1_sleep.setProgress(Float(abs(current.getChoice1().getSleep()))/10, animated: true)
         
-        choice2_health.setProgress(Float(current.choice2Health), animated: true)
-        choice2_food.setProgress(Float(current.choice2Food), animated: true)
-        choice2_fear.setProgress(Float(current.choice2Fear), animated: true)
-        choice2_sleep.setProgress(Float(current.choice2Sleep), animated: true)
         
+        choice2_health.setProgress(Float(abs(current.getChoice2().getHealth()))/10, animated: true)
+        choice2_food.setProgress(Float(abs(current.getChoice2().getFood()))/10, animated: true)
+        choice2_fear.setProgress(Float(abs(current.getChoice2().getFear()))/10, animated: true)
+        choice2_sleep.setProgress(Float(abs(current.getChoice2().getSleep()))/10, animated: true)
     }
 
     /*

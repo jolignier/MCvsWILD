@@ -38,6 +38,14 @@ class Character {
         
     }
     
+    func myChoice(choice: Choice) {
+        self.score += choice.getTime()
+        self.health += choice.getHealth()
+        self.food += choice.getFood()
+        self.fear += choice.getFear()
+        self.sleep += choice.getSleep()
+    }
+    
     func addHealth(toAdd: Int) {
         if (toAdd + self.health > MAXSTAT) {
             self.health = MAXSTAT

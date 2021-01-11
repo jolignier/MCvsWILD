@@ -14,6 +14,7 @@ class Event {
     var title: String = ""
     var description: String = ""
     
+    /*
     var choice1Title: String = ""
     var choice1Health: Int = 0
     var choice1Food: Int = 0
@@ -31,6 +32,10 @@ class Event {
     var choice2Time: Int = 0
     var choice2Loot: String = "NULL"
     var choice2Next: String = "NULL"
+    */
+    
+    var choice1 = Choice()
+    var choice2 = Choice()
     
     
     init(pathEvent: String) {
@@ -65,39 +70,39 @@ class Event {
                 
                 
             case "Choix1_Titre":
-                choice1Title = String(separate[1])
+                choice1.setDescription(description: String(separate[1]))
             case "Choix1_Alimentatino":
-                choice1Food = Int(separate[1])!
+                choice1.setFood(food: Int(separate[1])!)
             case "Choix1_Vie":
-                choice1Health = Int(separate[1])!
+                choice1.setHealth(health: Int(separate[1])!)
             case "Choix1_Epuisement":
-                choice1Sleep = Int(separate[1])!
+                choice1.setSleep(sleep: Int(separate[1])!)
             case "Choix1_Peur":
-                choice1Fear = Int(separate[1])!
+                choice1.setFear(fear: Int(separate[1])!)
             case "Choix1_Time":
-                choice1Time = Int(separate[1])!
+                choice1.setTime(time: Int(separate[1])!)
             case "Choix1_Loot":
-                choice1Loot = String(separate[1])
+                choice1.setLoot(loot: String(separate[1]))
             case "Choix1_Next":
-                choice1Next = String(separate[1])
+                choice1.setNext(next: String(separate[1]))
                 
                 
             case "Choix2_Titre":
-                choice2Title = String(separate[1])
+                choice2.setDescription(description: String(separate[1]))
             case "Choix2_Alimentatino":
-                choice2Food = Int(separate[1])!
+                choice2.setFood(food: Int(separate[1])!)
             case "Choix2_Vie":
-                choice2Health = Int(separate[1])!
+                choice2.setHealth(health: Int(separate[1])!)
             case "Choix2_Epuisement":
-                choice2Sleep = Int(separate[1])!
+                choice2.setSleep(sleep: Int(separate[1])!)
             case "Choix2_Peur":
-                choice2Fear = Int(separate[1])!
+                choice2.setFear(fear: Int(separate[1])!)
             case "Choix2_Time":
-                choice2Time = Int(separate[1])!
+                choice2.setTime(time: Int(separate[1])!)
             case "Choix2_Loot":
-                choice2Loot = String(separate[1])
+                choice2.setLoot(loot: String(separate[1]))
             case "Choix2_Next":
-                choice2Next = String(separate[1])
+                choice2.setNext(next: String(separate[1]))
                 
             default:
                 break
@@ -105,27 +110,17 @@ class Event {
         }
     }
     
+    
+    
     func getDescription() -> String {
         description
     }
     
-    func getHealth1() -> Int {
-        choice1Health
+    func getChoice1() -> Choice {
+        choice1
     }
-    func getFood1() -> Int {
-        choice1Food
-    }
-    func getFear1() -> Int {
-        choice1Fear
-    }
-    func getSleep1() -> Int {
-        choice1Sleep
-    }
-    func getDescription1() -> String {
-        choice1Title
-    }
-    func getDescription2() -> String {
-        choice2Title
+    func getChoice2() -> Choice {
+        choice2
     }
     
 }
