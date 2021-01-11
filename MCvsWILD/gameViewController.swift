@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var player_name: UILabel!
     @IBOutlet weak var score: UILabel!
+    
     @IBOutlet weak var choice1: UIStackView!
     @IBOutlet weak var choice1_description: UILabel!
     @IBOutlet weak var choice1_health: StatBar!
@@ -26,6 +27,7 @@ class GameViewController: UIViewController {
     
     
     @IBOutlet weak var choice2: UIStackView!
+    @IBOutlet weak var choice2_description: UILabel!
     @IBOutlet weak var choice2_health: StatBar!
     @IBOutlet weak var choice2_food: StatBar!
     @IBOutlet weak var choice2_fear: StatBar!
@@ -38,7 +40,7 @@ class GameViewController: UIViewController {
 
         var main = Character()
         var current = Event(pathEvent: "eventScenario")
-        
+        changeViewEvent(current: current)
         player_name.text = main.getName()
         score.text = String(0)
         
@@ -54,14 +56,28 @@ class GameViewController: UIViewController {
 
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
         print("choice 1")
-        
+        changeViewEvent(current: Event(pathEvent: "event8"))
     }
     
     @objc func clickOnChoice2(_ sender:UITapGestureRecognizer) {
         print("choice 2")
     }
     
-    func changeEvent(current: Event) {
+    func changeViewEvent(current: Event) {
+        event_description.text = current.getDescription()
+        
+        choice1_description.text = current.getDescription1()
+        choice2_description.text = current.getDescription2()
+        
+        choice1_health.setProgress(Float(current.choice1Health), animated: true)
+        choice1_food.setProgress(Float(current.choice1Food), animated: true)
+        choice1_fear.setProgress(Float(current.choice1Fear), animated: true)
+        choice1_sleep.setProgress(Float(current.choice1Sleep), animated: true)
+        
+        choice2_health.setProgress(Float(current.choice2Health), animated: true)
+        choice2_food.setProgress(Float(current.choice2Food), animated: true)
+        choice2_fear.setProgress(Float(current.choice2Fear), animated: true)
+        choice2_sleep.setProgress(Float(current.choice2Sleep), animated: true)
         
     }
 

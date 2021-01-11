@@ -37,7 +37,6 @@ class Event {
         var text = ""
         if let data = NSDataAsset(name: pathEvent)?.data {
             text = String(data: data, encoding: .utf8)!
-            print(text)
         }
         let lines = text.split(separator: "\n")
         fillData(lines: lines)
@@ -49,7 +48,6 @@ class Event {
         var text = ""
         if let data = NSDataAsset(name: "event" + String(numEvent))?.data {
             text = String(data: data, encoding: .utf8)!
-            print(text)
         }
         let lines = text.split(separator: "\n")
         fillData(lines: lines)
@@ -107,6 +105,27 @@ class Event {
         }
     }
     
+    func getDescription() -> String {
+        description
+    }
     
+    func getHealth1() -> Int {
+        choice1Health
+    }
+    func getFood1() -> Int {
+        choice1Food
+    }
+    func getFear1() -> Int {
+        choice1Fear
+    }
+    func getSleep1() -> Int {
+        choice1Sleep
+    }
+    func getDescription1() -> String {
+        choice1Title
+    }
+    func getDescription2() -> String {
+        choice2Title
+    }
     
 }
