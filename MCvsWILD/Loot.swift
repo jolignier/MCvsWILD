@@ -16,16 +16,14 @@ class Loot {
     var fear: Int = 0
     var sleep: Int = 0
     var addBagSpace: Int = 0
-    var pathImg: String = "Defalut.png"
+    var pathImg: String = "Default.png"
     
     init(lootPath: String) {
         var text = ""
         if let data = NSDataAsset(name: lootPath)?.data {
             text = String(data: data, encoding: .utf8)!
-            print(text)
         }
         let lines = text.split(separator: "\n")
-        print(lines)
         
         
         

@@ -97,7 +97,6 @@ class Character {
         
         if isNotFull {
             inventory.append(newStuff)
-            print(newStuff)
         }
         isNotFull = inventory.count >= maxItem
         return isNotFull

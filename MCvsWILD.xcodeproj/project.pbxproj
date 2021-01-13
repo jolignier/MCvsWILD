@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8120584E25AF879A00A95E9D /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8120584D25AF879A00A95E9D /* InventoryViewController.swift */; };
+		8120585325AFA69600A95E9D /* NewPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8120585225AFA69600A95E9D /* NewPopUp.swift */; };
+		8120585825AFA75E00A95E9D /* NewAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8120585725AFA75E00A95E9D /* NewAlertController.swift */; };
 		813817E225ACBBE400CDA636 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813817E125ACBBE400CDA636 /* Choice.swift */; };
 		81825CE825A4B21C0029A060 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81825CE725A4B21C0029A060 /* gameViewController.swift */; };
 		81825CED25A4C44A0029A060 /* statBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81825CEC25A4C44A0029A060 /* statBar.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		8120584D25AF879A00A95E9D /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		8120585225AFA69600A95E9D /* NewPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPopUp.swift; sourceTree = "<group>"; };
+		8120585725AFA75E00A95E9D /* NewAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlertController.swift; sourceTree = "<group>"; };
 		813817E125ACBBE400CDA636 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		81825CE725A4B21C0029A060 /* gameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
 		81825CEC25A4C44A0029A060 /* statBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statBar.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				81AB952025A4A3180007F2BE /* Info.plist */,
 				819AEFC225A70C1A00C23A58 /* Event.swift */,
 				813817E125ACBBE400CDA636 /* Choice.swift */,
+				8120585225AFA69600A95E9D /* NewPopUp.swift */,
+				8120585725AFA75E00A95E9D /* NewAlertController.swift */,
 			);
 			path = MCvsWILD;
 			sourceTree = "<group>";
@@ -284,9 +290,11 @@
 				81825CE825A4B21C0029A060 /* gameViewController.swift in Sources */,
 				819AEFC325A70C1A00C23A58 /* Event.swift in Sources */,
 				81AB951725A4A3170007F2BE /* ViewController.swift in Sources */,
+				8120585325AFA69600A95E9D /* NewPopUp.swift in Sources */,
 				818C30A625AC68A00017F886 /* Loot.swift in Sources */,
 				81AB951325A4A3170007F2BE /* AppDelegate.swift in Sources */,
 				8120584E25AF879A00A95E9D /* InventoryViewController.swift in Sources */,
+				8120585825AFA75E00A95E9D /* NewAlertController.swift in Sources */,
 				81AB951525A4A3170007F2BE /* SceneDelegate.swift in Sources */,
 				818C30A725AC68A00017F886 /* Character.swift in Sources */,
 			);

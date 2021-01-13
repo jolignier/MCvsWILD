@@ -39,7 +39,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var choice2_sleep: StatBar!
     
     var main = Character()
-    var current = Event(pathEvent: "eventGrotteAlimentationSortie")
+    
+    var current = Event(pathEvent: "eventScenario")
     
     
     override func viewDidLoad() {
@@ -81,8 +82,23 @@ class GameViewController: UIViewController {
         if (choice.getLoot() != "NULL") {
             var loot = choice.getLoot().split(separator: "/").last!
             loot = loot.split(separator: ".").first!
-            print(loot)
-            main.addStuff(newStuff: Loot(lootPath: String(loot)))
+            
+            let newLoot = Loot(lootPath: String(loot))
+            
+            // Create AlertController
+            let alert = AlertController(title: "T'as trouvé ca ! Trop fort !", message: "Alors voyons voir... Oh ba dis tu as trouvé : " + newLoot.title, preferredStyle: .alert)
+            alert.setTitleImage(UIImage(named: String(newLoot.pathImg.split(separator: ".").first!)))
+            // Add actions
+            let action = UIAlertAction(title: "Yay", style: .cancel, handler: nil)
+    
+            
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+
+            print(newLoot.pathImg.split(separator: ".").first!)
+          
+            
+            main.addStuff(newStuff: newLoot)
         }
     }
     
