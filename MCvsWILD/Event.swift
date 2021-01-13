@@ -39,23 +39,36 @@ class Event {
     
     
     init(pathEvent: String) {
-        var text = ""
-        if let data = NSDataAsset(name: pathEvent)?.data {
-            text = String(data: data, encoding: .utf8)!
-        }
-        let lines = text.split(separator: "\n")
+        
+        let lines = read(path: pathEvent)
         fillData(lines: lines)
         
     }
     
-    func newEvent() -> () {
-        let numEvent = Int.random(in: 0...63)
+    func newEvent(choice: Choice) -> () {
+        if (choice.getNext() != "NULL") {
+            var nextPath = choice.getNext().split(separator: "/").last!
+            nextPath = nextPath.split(separator: ".").first!
+            let lines = read(path: String(nextPath))
+            fillData(lines: lines)
+                    
+        }
+        else {
+            let numEvent = Int.random(in: 0...63)
+            let lines = read(path: "event" + String(numEvent))
+            fillData(lines: lines)
+            
+        }
+    }
+    
+    func read(path: String) -> Array<Substring> {
         var text = ""
-        if let data = NSDataAsset(name: "event" + String(numEvent))?.data {
+        if let data = NSDataAsset(name: path)?.data {
             text = String(data: data, encoding: .utf8)!
         }
         let lines = text.split(separator: "\n")
-        fillData(lines: lines)
+        
+        return lines
     }
     
     func fillData(lines: Array<Substring>) {

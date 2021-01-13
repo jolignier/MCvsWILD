@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var choice2_sleep: StatBar!
     
     var main = Character()
-    var current = Event(pathEvent: "eventScenario")
+    var current = Event(pathEvent: "eventGrottePeurB")
     
     
     override func viewDidLoad() {
@@ -63,17 +63,19 @@ class GameViewController: UIViewController {
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
         print("choice 1")
         main.myChoice(choice: current.getChoice1())
-        current.newEvent()
-        changeViewEvent(current: current)
+        next(choice: current.getChoice1())
         
     }
     
     @objc func clickOnChoice2(_ sender:UITapGestureRecognizer) {
         print("choice 2")
         main.myChoice(choice: current.getChoice2())
-        current.newEvent()
+        next(choice: current.getChoice2())
+    }
+    
+    func next(choice: Choice) {
+        current.newEvent(choice: choice)
         changeViewEvent(current: current)
-        
     }
     
     
