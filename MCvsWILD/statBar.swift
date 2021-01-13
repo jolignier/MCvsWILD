@@ -2,7 +2,7 @@
 //  statBar.swift
 //  MCvsWILD
 //
-//  Created by “ios” on 05/01/2021.
+//  Created by “Jonathan Lignier” on 05/01/2021.
 //
 
 import Foundation

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8120584E25AF879A00A95E9D /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8120584D25AF879A00A95E9D /* InventoryViewController.swift */; };
 		813817E225ACBBE400CDA636 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813817E125ACBBE400CDA636 /* Choice.swift */; };
 		81825CE825A4B21C0029A060 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81825CE725A4B21C0029A060 /* gameViewController.swift */; };
 		81825CED25A4C44A0029A060 /* statBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81825CEC25A4C44A0029A060 /* statBar.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8120584D25AF879A00A95E9D /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		813817E125ACBBE400CDA636 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		81825CE725A4B21C0029A060 /* gameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
 		81825CEC25A4C44A0029A060 /* statBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statBar.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				81AB951825A4A3170007F2BE /* Main.storyboard */,
 				81825CEC25A4C44A0029A060 /* statBar.swift */,
 				81825CE725A4B21C0029A060 /* gameViewController.swift */,
+				8120584D25AF879A00A95E9D /* InventoryViewController.swift */,
 				818C30A525AC68A00017F886 /* Character.swift */,
 				818C30A425AC68A00017F886 /* Loot.swift */,
 				81AB951B25A4A3180007F2BE /* Assets.xcassets */,
@@ -283,6 +286,7 @@
 				81AB951725A4A3170007F2BE /* ViewController.swift in Sources */,
 				818C30A625AC68A00017F886 /* Loot.swift in Sources */,
 				81AB951325A4A3170007F2BE /* AppDelegate.swift in Sources */,
+				8120584E25AF879A00A95E9D /* InventoryViewController.swift in Sources */,
 				81AB951525A4A3170007F2BE /* SceneDelegate.swift in Sources */,
 				818C30A725AC68A00017F886 /* Character.swift in Sources */,
 			);

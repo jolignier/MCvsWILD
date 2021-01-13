@@ -10,16 +10,16 @@ import UIKit
 
 
 class Character {
-    let MAXSTAT: Int = 20
+    private let MAXSTAT: Int = 20
     
-    var name: String = ""
-    var score: Int = 0
-    var health: Int
-    var food: Int
-    var fear: Int
-    var sleep: Int
-    var maxItem: Int = 6
-    var inventory: Array<Loot> = []
+    private var name: String = ""
+    private var score: Int = 0
+    private var health: Int
+    private var food: Int
+    private var fear: Int
+    private var sleep: Int
+    private var maxItem: Int = 6
+    private var inventory: Array<Loot> = []
     
     
     
@@ -92,8 +92,36 @@ class Character {
         }
     }
     
+    func addStuff(newStuff: Loot) -> Bool {
+        var isNotFull = inventory.count >= maxItem
+        
+        if isNotFull {
+            inventory.append(newStuff)
+            print(newStuff)
+        }
+        isNotFull = inventory.count >= maxItem
+        return isNotFull
+    }
+    
     func getName() -> String {
         self.name
     }
+    
+    func getScore() -> Int {
+        self.score
+    }
+    func getHealth() -> Int {
+        self.health
+    }
+    func getFood() -> Int {
+        self.food
+    }
+    func getFear() -> Int {
+        self.fear
+    }
+    func getSleep() -> Int {
+        self.sleep
+    }
+    
     
 }

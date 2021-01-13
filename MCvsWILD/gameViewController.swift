@@ -2,7 +2,7 @@
 //  gameViewController.swift
 //  MCvsWILD
 //
-//  Created by “ios” on 05/01/2021.
+//  Created by “Jonathan Lignier” on 05/01/2021.
 //
 
 import UIKit
@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var choice2_sleep: StatBar!
     
     var main = Character()
-    var current = Event(pathEvent: "eventGrottePeurB")
+    var current = Event(pathEvent: "eventGrotteAlimentationSortie")
     
     
     override func viewDidLoad() {
@@ -63,6 +63,7 @@ class GameViewController: UIViewController {
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
         print("choice 1")
         main.myChoice(choice: current.getChoice1())
+        isLoot(choice: current.getChoice1())
         next(choice: current.getChoice1())
         
     }
@@ -70,22 +71,33 @@ class GameViewController: UIViewController {
     @objc func clickOnChoice2(_ sender:UITapGestureRecognizer) {
         print("choice 2")
         main.myChoice(choice: current.getChoice2())
+        isLoot(choice: current.getChoice2())
         next(choice: current.getChoice2())
+    }
+    
+    
+    
+    func isLoot(choice: Choice) {
+        if (choice.getLoot() != "NULL") {
+            var loot = choice.getLoot().split(separator: "/").last!
+            loot = loot.split(separator: ".").first!
+            print(loot)
+            main.addStuff(newStuff: Loot(lootPath: String(loot)))
+        }
     }
     
     func next(choice: Choice) {
         current.newEvent(choice: choice)
-        changeViewEvent(current: current)
+        changeViewEvent(current: current) 
     }
-    
     
     func changeViewEvent(current: Event) {
         
-        score.text = String(main.score)
-        player_health.setProgress(Float(main.health)/20, animated: true)
-        player_food.setProgress(Float(main.food)/20, animated: true)
-        player_fear.setProgress(Float(main.fear)/20, animated: true)
-        player_sleep.setProgress(Float(main.sleep)/20, animated: true)
+        score.text = String(main.getScore())
+        player_health.setProgress(Float(main.getHealth())/20, animated: true)
+        player_food.setProgress(Float(main.getFood())/20, animated: true)
+        player_fear.setProgress(Float(main.getFear())/20, animated: true)
+        player_sleep.setProgress(Float(main.getSleep())/20, animated: true)
         
         event_description.text = current.getDescription()
         
@@ -103,15 +115,20 @@ class GameViewController: UIViewController {
         choice2_fear.setProgress(Float(abs(current.getChoice2().getFear()))/10, animated: true)
         choice2_sleep.setProgress(Float(abs(current.getChoice2().getSleep()))/10, animated: true)
     }
+    
+    
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if let vc = segue.destination as? InventoryViewController {
+            vc.main = main
+            vc.current = current
+        }
     }
-    */
+    
 
 }

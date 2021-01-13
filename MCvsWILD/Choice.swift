@@ -2,7 +2,7 @@
 //  choice.swift
 //  MCvsWILD
 //
-//  Created by “ios” on 11/01/2021.
+//  Created by “Valentin Joly” on 11/01/2021.
 //
 
 import Foundation
