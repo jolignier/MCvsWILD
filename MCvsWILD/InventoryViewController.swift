@@ -39,6 +39,35 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if (indexPath.row <= main!.getMaxItem()) {
+            
+            let item = main!.getItem(index: indexPath.row)
+            
+            // Create AlertController
+            let alert = AlertController(title: "Utiliser ?", message: "Veux tu utiliser : " + item.getTitle() + " ?", preferredStyle: .alert)
+            alert.setTitleImage(UIImage(named: item.getImgPath()))
+            
+            // Add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Bien Evidement", style: .default, handler: { [self]_ in
+                main!.useItem(index: indexPath.row)
+                
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Nop", style: .cancel, handler: nil))
+        
+            present(alert, animated: true, completion: nil)
+            
+        }
+        
+
+
+        
+        
+    }
 
     
     override func viewDidLoad() {
@@ -50,6 +79,7 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
             player_score.text = String(character.getScore())
             print(character.getCurrentItemCount())
         }
+        
         inventoryTableView.delegate = self
         inventoryTableView.dataSource = self
     }

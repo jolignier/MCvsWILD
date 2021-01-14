@@ -46,6 +46,20 @@ class Character {
         self.sleep += choice.getSleep()
     }
     
+    func useItem(index: Int) {
+        
+        let item = self.inventory[index]
+        
+        self.health += item.getHealth()
+        self.food += item.getFood()
+        self.fear += item.getFear()
+        self.sleep += item.getSleep()
+        
+        self.maxItem += item.getMoreSpace()
+        
+        self.inventory.remove(at: index)
+    }
+    
     func addHealth(toAdd: Int) {
         if (toAdd + self.health > MAXSTAT) {
             self.health = MAXSTAT
@@ -129,7 +143,8 @@ class Character {
     }
     
     func getItem(index: Int) -> Loot {
-        self.inventory[index]
+        return self.inventory[index]
+        
     }
     
     

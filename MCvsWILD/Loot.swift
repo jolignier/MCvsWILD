@@ -67,7 +67,9 @@ class Loot {
     func getSleep() -> Int {
         self.sleep
     }
-    
+    func getMoreSpace() -> Int {
+        self.addBagSpace
+    }
     func getImgPath() -> String {
         String(self.pathImg.split(separator: ".").first!)
     }
