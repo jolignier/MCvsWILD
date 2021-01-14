@@ -98,7 +98,6 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
                 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "menuVC") as! ViewController
-                print(newViewController)
                 self.present(newViewController, animated:true, completion:nil)
                 
             })
@@ -113,7 +112,6 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
             
             if (main!.getScore() > bestScore) {
                 do {
-                    print(String(main!.getScore()))
                     try String(main!.getScore()).write(toFile: "HighScore", atomically: false, encoding: .utf8)
                 }
                 catch {

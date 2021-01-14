@@ -78,7 +78,6 @@ class GameViewController: UIViewController {
                 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "menuVC") as! ViewController
-                print(newViewController)
                 self.present(newViewController, animated:true, completion:nil)
                 
             })
@@ -94,7 +93,6 @@ class GameViewController: UIViewController {
             
             if (main.getScore() > bestScore) {
                 do {
-                    print(String(main.getScore()))
                     try String(main.getScore()).write(toFile: "HighScore", atomically: false, encoding: .utf8)
                 }
                 catch {
