@@ -54,7 +54,7 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
             alert.addAction(UIAlertAction(title: "Bien Evidement", style: .default, handler: { [self]_ in
                 main!.useItem(index: indexPath.row)
                 
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .left)
             }))
             
             alert.addAction(UIAlertAction(title: "Nop", style: .cancel, handler: nil))
@@ -63,17 +63,13 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
             
         }
         
-
-
-        
-        
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.inventoryTableView.rowHeight = 120
+        self.inventoryTableView.rowHeight = 110
         if let character = main {
             player_name.text = character.getName()
             player_score.text = String(character.getScore())

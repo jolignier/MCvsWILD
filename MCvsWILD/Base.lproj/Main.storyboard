@@ -408,7 +408,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="laN-Qk-6JW">
-                                <rect key="frame" x="20" y="146" width="335" height="646"/>
+                                <rect key="frame" x="20" y="156" width="335" height="636"/>
                                 <color key="backgroundColor" red="0.9599711688586281" green="1" blue="0.98770117577445704" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="inventoryCell" rowHeight="282" id="2Y8-4V-xvu" customClass="inventoryTableViewCell" customModule="MCvsWILD" customModuleProvider="target">
@@ -418,119 +418,125 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="282"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="daz-KC-ZDY">
-                                                    <rect key="frame" x="16" y="11" width="303" height="75"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZEj-ZL-t1U">
+                                                    <rect key="frame" x="16" y="16" width="303" height="100"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZEj-ZL-t1U">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="75"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LootName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKt-N8-qUC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="daz-KC-ZDY">
+                                                            <rect key="frame" x="0.0" y="40" width="303" height="60"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u5d-Ei-WwT">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="60" id="0Cg-gi-5dj"/>
-                                                                        <constraint firstAttribute="height" constant="60" id="hyo-zz-4ga"/>
+                                                                        <constraint firstAttribute="height" constant="60" id="9bo-JU-ShO"/>
+                                                                        <constraint firstAttribute="width" constant="60" id="cED-mQ-Gne"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LootName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKt-N8-qUC">
-                                                                    <rect key="frame" x="0.0" y="60" width="60" height="15"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hxs-5O-jTM" userLabel="columns_stats">
-                                                            <rect key="frame" x="132" y="0.0" width="171" height="75"/>
-                                                            <subviews>
-                                                                <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i3K-qB-R9y" userLabel="left_stats">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="78" height="75"/>
+                                                                <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hxs-5O-jTM" userLabel="columns_stats">
+                                                                    <rect key="frame" x="80" y="0.0" width="223" height="60"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-3K-jFf" userLabel="health_stats">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="37.666666666666664"/>
+                                                                        <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i3K-qB-R9y" userLabel="left_stats">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="104" height="60"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="p44-6g-Xa8">
-                                                                                    <rect key="frame" x="0.0" y="8.6666666666666679" width="20" height="20"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" constant="20" id="677-at-D4W"/>
-                                                                                        <constraint firstAttribute="height" constant="20" id="RG2-hg-aH6"/>
-                                                                                    </constraints>
-                                                                                </imageView>
-                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xCI-P7-Fa8" userLabel="health_bar">
-                                                                                    <rect key="frame" x="26" y="16.666666666666668" width="52" height="4"/>
-                                                                                    <color key="tintColor" systemColor="systemRedColor"/>
-                                                                                </progressView>
+                                                                                <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-3K-jFf" userLabel="health_stats">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="hearth" translatesAutoresizingMaskIntoConstraints="NO" id="p44-6g-Xa8">
+                                                                                            <rect key="frame" x="0.0" y="5" width="20" height="20"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="width" constant="20" id="677-at-D4W"/>
+                                                                                                <constraint firstAttribute="height" constant="20" id="RG2-hg-aH6"/>
+                                                                                            </constraints>
+                                                                                        </imageView>
+                                                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xCI-P7-Fa8" userLabel="health_bar">
+                                                                                            <rect key="frame" x="26" y="13" width="78" height="4"/>
+                                                                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                                                                        </progressView>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fD7-fA-gpH" userLabel="food_stats">
+                                                                                    <rect key="frame" x="0.0" y="30" width="104" height="30"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="Zhd-Oa-KYX">
+                                                                                            <rect key="frame" x="0.0" y="5" width="20" height="20"/>
+                                                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="width" constant="20" id="j2C-fY-Qo5"/>
+                                                                                                <constraint firstAttribute="height" constant="20" id="xIo-RJ-iDs"/>
+                                                                                            </constraints>
+                                                                                        </imageView>
+                                                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MFw-SN-F5o" userLabel="food_bar">
+                                                                                            <rect key="frame" x="26" y="13" width="78" height="4"/>
+                                                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                                        </progressView>
+                                                                                    </subviews>
+                                                                                </stackView>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fD7-fA-gpH" userLabel="food_stats">
-                                                                            <rect key="frame" x="0.0" y="37.666666666666657" width="78" height="37.333333333333343"/>
+                                                                        <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-Cf-R2x" userLabel="right_stats">
+                                                                            <rect key="frame" x="119" y="0.0" width="104" height="60"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="meat" translatesAutoresizingMaskIntoConstraints="NO" id="Zhd-Oa-KYX">
-                                                                                    <rect key="frame" x="0.0" y="8.6666666666666714" width="20" height="20"/>
-                                                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" constant="20" id="j2C-fY-Qo5"/>
-                                                                                        <constraint firstAttribute="height" constant="20" id="xIo-RJ-iDs"/>
-                                                                                    </constraints>
-                                                                                </imageView>
-                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MFw-SN-F5o" userLabel="food_bar">
-                                                                                    <rect key="frame" x="26" y="16.666666666666664" width="52" height="4"/>
-                                                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
-                                                                                </progressView>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T4U-Cf-R2x" userLabel="right_stats">
-                                                                    <rect key="frame" x="93" y="0.0" width="78" height="75"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QFU-Pu-2zw" userLabel="fear_stats">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="37.666666666666664"/>
-                                                                            <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="r48-fj-eBY">
-                                                                                    <rect key="frame" x="0.0" y="8.6666666666666679" width="20" height="20"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="height" constant="20" id="7Gh-bA-P5K"/>
-                                                                                        <constraint firstAttribute="width" constant="20" id="q7w-sv-y36"/>
-                                                                                    </constraints>
-                                                                                </imageView>
-                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kVR-pU-5wI" userLabel="fear_bar">
-                                                                                    <rect key="frame" x="26" y="16.666666666666668" width="52" height="4"/>
-                                                                                    <color key="tintColor" systemColor="systemPurpleColor"/>
-                                                                                </progressView>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                        <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-N1-qGF" userLabel="sleep_stats">
-                                                                            <rect key="frame" x="0.0" y="37.666666666666657" width="78" height="37.333333333333343"/>
-                                                                            <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="JVU-Rq-iMV">
-                                                                                    <rect key="frame" x="0.0" y="8.6666666666666714" width="20" height="20"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="height" constant="20" id="jM4-1l-LoM"/>
-                                                                                        <constraint firstAttribute="width" constant="20" id="t0L-0C-le0"/>
-                                                                                    </constraints>
-                                                                                </imageView>
-                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="G5u-we-HnM" userLabel="sleep_bar">
-                                                                                    <rect key="frame" x="26" y="16.666666666666664" width="52" height="4"/>
-                                                                                    <color key="tintColor" systemColor="systemGreenColor"/>
-                                                                                </progressView>
+                                                                                <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QFU-Pu-2zw" userLabel="fear_stats">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ghost" translatesAutoresizingMaskIntoConstraints="NO" id="r48-fj-eBY">
+                                                                                            <rect key="frame" x="0.0" y="5" width="20" height="20"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="20" id="7Gh-bA-P5K"/>
+                                                                                                <constraint firstAttribute="width" constant="20" id="q7w-sv-y36"/>
+                                                                                            </constraints>
+                                                                                        </imageView>
+                                                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kVR-pU-5wI" userLabel="fear_bar">
+                                                                                            <rect key="frame" x="26" y="13" width="78" height="4"/>
+                                                                                            <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                                                        </progressView>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="center" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-N1-qGF" userLabel="sleep_stats">
+                                                                                    <rect key="frame" x="0.0" y="30" width="104" height="30"/>
+                                                                                    <subviews>
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="JVU-Rq-iMV">
+                                                                                            <rect key="frame" x="0.0" y="5" width="20" height="20"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="20" id="jM4-1l-LoM"/>
+                                                                                                <constraint firstAttribute="width" constant="20" id="t0L-0C-le0"/>
+                                                                                            </constraints>
+                                                                                        </imageView>
+                                                                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="G5u-we-HnM" userLabel="sleep_bar">
+                                                                                            <rect key="frame" x="26" y="13" width="78" height="4"/>
+                                                                                            <color key="tintColor" systemColor="systemGreenColor"/>
+                                                                                        </progressView>
+                                                                                    </subviews>
+                                                                                </stackView>
                                                                             </subviews>
                                                                         </stackView>
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="hxs-5O-jTM" secondAttribute="trailing" id="2c6-1m-c1p"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="75" id="snj-fP-9e1"/>
+                                                        <constraint firstItem="daz-KC-ZDY" firstAttribute="leading" secondItem="ZEj-ZL-t1U" secondAttribute="leading" id="AlA-Wd-U7N"/>
+                                                        <constraint firstAttribute="trailing" secondItem="daz-KC-ZDY" secondAttribute="trailing" id="NBX-zY-pCM"/>
+                                                        <constraint firstItem="daz-KC-ZDY" firstAttribute="top" secondItem="WKt-N8-qUC" secondAttribute="bottom" constant="10" id="T1B-DL-jBo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="daz-KC-ZDY" secondAttribute="bottom" id="Wny-rd-kP9"/>
+                                                        <constraint firstAttribute="height" constant="100" id="hZT-hB-NWK"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.9599711688586281" green="1" blue="0.98770117577445704" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstItem="daz-KC-ZDY" firstAttribute="trailing" secondItem="UBb-5b-W6p" secondAttribute="trailingMargin" id="7wy-OS-dEY"/>
-                                                <constraint firstItem="daz-KC-ZDY" firstAttribute="centerX" secondItem="UBb-5b-W6p" secondAttribute="centerX" id="L6f-bn-5Fe"/>
-                                                <constraint firstItem="daz-KC-ZDY" firstAttribute="top" secondItem="UBb-5b-W6p" secondAttribute="topMargin" id="bxc-Ez-eHD"/>
-                                                <constraint firstItem="daz-KC-ZDY" firstAttribute="leading" secondItem="UBb-5b-W6p" secondAttribute="leadingMargin" id="ymY-9J-Ric"/>
+                                                <constraint firstItem="ZEj-ZL-t1U" firstAttribute="trailing" secondItem="UBb-5b-W6p" secondAttribute="trailingMargin" id="NCz-vM-UPV"/>
+                                                <constraint firstItem="ZEj-ZL-t1U" firstAttribute="top" secondItem="UBb-5b-W6p" secondAttribute="topMargin" constant="5" id="Y12-Jj-B1j"/>
+                                                <constraint firstItem="ZEj-ZL-t1U" firstAttribute="leading" secondItem="UBb-5b-W6p" secondAttribute="leadingMargin" id="nyA-pN-t7I"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9599711689" green="1" blue="0.98770117580000005" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
@@ -551,11 +557,11 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Hi9-kI-oim" secondAttribute="bottom" id="8EE-J5-nj4"/>
                             <constraint firstItem="Hi9-kI-oim" firstAttribute="centerX" secondItem="KYU-by-uhZ" secondAttribute="centerX" id="Bov-GK-zXK"/>
-                            <constraint firstItem="laN-Qk-6JW" firstAttribute="top" secondItem="B65-xF-utb" secondAttribute="bottom" constant="10" id="DOa-GG-uoE"/>
                             <constraint firstItem="Hi9-kI-oim" firstAttribute="top" secondItem="KYU-by-uhZ" secondAttribute="top" id="FVP-Fe-K6X"/>
-                            <constraint firstItem="laN-Qk-6JW" firstAttribute="leading" secondItem="w9p-49-ogN" secondAttribute="leading" constant="20" id="IQV-SK-dfQ"/>
-                            <constraint firstItem="w9p-49-ogN" firstAttribute="trailing" secondItem="laN-Qk-6JW" secondAttribute="trailing" constant="20" id="Kf7-VZ-bGJ"/>
-                            <constraint firstItem="laN-Qk-6JW" firstAttribute="bottom" secondItem="KYU-by-uhZ" secondAttribute="bottom" constant="-20" id="R4g-3c-WUq"/>
+                            <constraint firstItem="laN-Qk-6JW" firstAttribute="leading" secondItem="w9p-49-ogN" secondAttribute="leading" constant="20" id="K2x-G8-thO"/>
+                            <constraint firstItem="laN-Qk-6JW" firstAttribute="top" secondItem="B65-xF-utb" secondAttribute="bottom" constant="20" id="Rqu-eW-Dmj"/>
+                            <constraint firstAttribute="bottom" secondItem="laN-Qk-6JW" secondAttribute="bottom" constant="20" id="bed-XW-hhT"/>
+                            <constraint firstItem="w9p-49-ogN" firstAttribute="trailing" secondItem="laN-Qk-6JW" secondAttribute="trailing" constant="20" id="cNR-4s-lZR"/>
                             <constraint firstItem="B65-xF-utb" firstAttribute="top" secondItem="w9p-49-ogN" secondAttribute="top" id="fAy-Sx-cpv"/>
                             <constraint firstItem="Hi9-kI-oim" firstAttribute="centerY" secondItem="KYU-by-uhZ" secondAttribute="centerY" id="shS-hn-ouS"/>
                             <constraint firstItem="w9p-49-ogN" firstAttribute="trailing" secondItem="B65-xF-utb" secondAttribute="trailing" constant="20" id="stT-6Q-yUf"/>

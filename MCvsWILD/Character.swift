@@ -108,7 +108,6 @@ class Character {
     
     func addStuff(newStuff: Loot) -> Bool {
         var isNotFull = inventory.count <= maxItem
-        print(isNotFull)
         if isNotFull {
             inventory.append(newStuff)
         }

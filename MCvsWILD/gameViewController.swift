@@ -64,7 +64,6 @@ class GameViewController: UIViewController {
     
 
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
-        print("choice 1")
         main.myChoice(choice: current.getChoice1())
         isLoot(choice: current.getChoice1())
         next(choice: current.getChoice1())
@@ -72,7 +71,6 @@ class GameViewController: UIViewController {
     }
     
     @objc func clickOnChoice2(_ sender:UITapGestureRecognizer) {
-        print("choice 2")
         main.myChoice(choice: current.getChoice2())
         isLoot(choice: current.getChoice2())
         next(choice: current.getChoice2())
@@ -90,7 +88,6 @@ class GameViewController: UIViewController {
             
             
             main.addStuff(newStuff: newLoot)
-            print(main.getCurrentItemCount())
             
             
             // Create AlertController
