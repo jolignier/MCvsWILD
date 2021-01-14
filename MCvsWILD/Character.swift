@@ -41,6 +41,11 @@ class Character {
     func myChoice(choice: Choice) {
         self.score += choice.getTime()
         self.health += choice.getHealth()
+        
+        if (health > MAXSTAT) {
+            health = MAXSTAT
+        }
+                
         self.food += choice.getFood()
         self.fear += choice.getFear()
         self.sleep += choice.getSleep()
@@ -51,6 +56,11 @@ class Character {
         let item = self.inventory[index]
         
         self.health += item.getHealth()
+        
+        if (health > MAXSTAT) {
+            health = MAXSTAT
+        }
+        
         self.food += item.getFood()
         self.fear += item.getFear()
         self.sleep += item.getSleep()
@@ -59,6 +69,36 @@ class Character {
         
         self.inventory.remove(at: index)
     }
+    
+    func isDead() -> Death {
+        
+        var death: Death = Death.Alive
+        
+        if (health <= 0) {
+            death = Death.L_Life
+            
+        } else if (fear > MAXSTAT) {
+            death = Death.H_Fear
+            
+        } else if (fear <= 0) {
+            death = Death.L_Fear
+            
+        } else if (food > MAXSTAT) {
+            death = Death.H_Food
+            
+        } else if (food <= 0) {
+            death = Death.L_Food
+            
+        } else if (sleep > MAXSTAT) {
+            death = Death.H_Sleep
+            
+        } else if (sleep <= 0) {
+            death = Death.L_Sleep
+            
+        }
+        return death
+    }
+    
     
     func addHealth(toAdd: Int) {
         if (toAdd + self.health > MAXSTAT) {

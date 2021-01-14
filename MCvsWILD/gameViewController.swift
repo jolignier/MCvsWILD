@@ -61,10 +61,37 @@ class GameViewController: UIViewController {
         self.choice2.addGestureRecognizer(tap2)
     }
     
-    
+    func dying(death: Death) {
+        
+        if (death != Death.Alive) {
+            
+            var text = ""
+            if let data = NSDataAsset(name: death.rawValue)?.data {
+                text = String(data: data, encoding: .utf8)!
+            }
+            
+            // Create AlertController
+            let alert = AlertController(title: "Spoiler Alert t'es mort.e", message: text, preferredStyle: .alert)
+            
+            // Add actions
+            let action = UIAlertAction(title: "oh sad 😢", style: .cancel, handler: {_ in
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "menuVC") as! ViewController
+                print(newViewController)
+                self.present(newViewController, animated:true, completion:nil)
+                
+            })
+
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+            
+        }
+    }
 
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
         main.myChoice(choice: current.getChoice1())
+        dying(death: main.isDead())
         isLoot(choice: current.getChoice1())
         next(choice: current.getChoice1())
         
@@ -72,6 +99,7 @@ class GameViewController: UIViewController {
     
     @objc func clickOnChoice2(_ sender:UITapGestureRecognizer) {
         main.myChoice(choice: current.getChoice2())
+        dying(death: main.isDead())
         isLoot(choice: current.getChoice2())
         next(choice: current.getChoice2())
     }
@@ -88,6 +116,8 @@ class GameViewController: UIViewController {
             
             
             main.addStuff(newStuff: newLoot)
+            
+            //TODO: earase some stuff if inventory is full
             
             
             // Create AlertController
