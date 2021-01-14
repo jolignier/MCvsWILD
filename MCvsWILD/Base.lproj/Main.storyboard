@@ -40,24 +40,41 @@
                                     <segue destination="7WZ-p6-fxf" kind="show" id="HjN-aK-Mxj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYI-Jn-TqP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <color key="backgroundColor" red="0.14933154225036779" green="0.14840401714322263" blue="0.15025906735751293" alpha="0.76549295774647885" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="mGD-0v-fKr"/>
+                                </constraints>
+                                <string key="text">Best Score : 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hp5-yf-7xL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DOw-AR-XDb"/>
+                            <constraint firstItem="nYI-Jn-TqP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gay-IZ-SOP"/>
                             <constraint firstItem="0vg-5F-GZS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HeB-KU-b9I"/>
+                            <constraint firstItem="nYI-Jn-TqP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ksd-2S-nj2"/>
                             <constraint firstItem="0vg-5F-GZS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ybh-pr-6HJ"/>
                             <constraint firstItem="Hp5-yf-7xL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="be3-W3-xsn"/>
+                            <constraint firstItem="nYI-Jn-TqP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c78-J3-fT4"/>
+                            <constraint firstItem="nYI-Jn-TqP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xWX-e7-jFu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fFR-Kj-j2U"/>
                     <connections>
+                        <outlet property="best_score" destination="nYI-Jn-TqP" id="LVS-xS-xW4"/>
                         <outlet property="play_btn" destination="0vg-5F-GZS" id="TDL-0Q-E2J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+            <point key="canvasLocation" x="136.80000000000001" y="103.44827586206897"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="wiq-wH-uYm">
