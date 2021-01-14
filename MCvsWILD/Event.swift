@@ -62,6 +62,7 @@ class Event {
     }
     
     func read(path: String) -> Array<Substring> {
+        print(path)
         var text = ""
         if let data = NSDataAsset(name: path)?.data {
             text = String(data: data, encoding: .utf8)!
@@ -75,6 +76,7 @@ class Event {
         
         for item in lines {
             let separate = item.split(separator: ":")
+            
             switch separate[0] {
             case "Titre":
                 title = String(separate[1])

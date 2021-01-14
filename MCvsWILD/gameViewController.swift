@@ -71,7 +71,7 @@ class GameViewController: UIViewController {
             }
             
             // Create AlertController
-            let alert = AlertController(title: "Spoiler Alert t'es mort.e", message: text, preferredStyle: .alert)
+            let alert = AlertController(title: "Spoiler Alert t'es mort.e, tu as fait le mauvais choix !", message: text, preferredStyle: .alert)
             
             // Add actions
             let action = UIAlertAction(title: "oh sad 😢", style: .cancel, handler: {_ in
@@ -88,7 +88,7 @@ class GameViewController: UIViewController {
             
         }
     }
-
+    
     @objc func clickOnChoice1(_ sender:UITapGestureRecognizer) {
         main.myChoice(choice: current.getChoice1())
         dying(death: main.isDead())

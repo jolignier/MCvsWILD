@@ -55,6 +55,7 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
                 main!.useItem(index: indexPath.row)
                 
                 tableView.deleteRows(at: [indexPath], with: .left)
+                dying(death: main!.isDead(), item: item)
             }))
             
             alert.addAction(UIAlertAction(title: "Nop", style: .cancel, handler: nil))
@@ -69,11 +70,10 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.inventoryTableView.rowHeight = 110
+        self.inventoryTableView.rowHeight = 120
         if let character = main {
             player_name.text = character.getName()
             player_score.text = String(character.getScore())
-            print(character.getCurrentItemCount())
         }
         
         inventoryTableView.delegate = self
@@ -81,6 +81,35 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
 
+    func dying(death: Death, item: Loot) {
+        
+        if (death != Death.Alive) {
+            
+            var text = ""
+            if let data = NSDataAsset(name: death.rawValue)?.data {
+                text = String(data: data, encoding: .utf8)!
+            }
+            
+            // Create AlertController
+            let alert = AlertController(title: "Tu viens de mourir a cause de : " + item.getTitle(), message: text, preferredStyle: .alert)
+            
+            // Add actions
+            let action = UIAlertAction(title: "oh sad 😢", style: .cancel, handler: {_ in
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "menuVC") as! ViewController
+                print(newViewController)
+                self.present(newViewController, animated:true, completion:nil)
+                
+            })
+
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
