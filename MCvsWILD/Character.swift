@@ -93,8 +93,8 @@ class Character {
     }
     
     func addStuff(newStuff: Loot) -> Bool {
-        var isNotFull = inventory.count >= maxItem
-        
+        var isNotFull = inventory.count <= maxItem
+        print(isNotFull)
         if isNotFull {
             inventory.append(newStuff)
         }
@@ -120,6 +120,16 @@ class Character {
     }
     func getSleep() -> Int {
         self.sleep
+    }
+    func getMaxItem() -> Int {
+        self.maxItem
+    }
+    func getCurrentItemCount() -> Int {
+        self.inventory.count
+    }
+    
+    func getItem(index: Int) -> Loot {
+        self.inventory[index]
     }
     
     

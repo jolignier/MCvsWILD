@@ -24,6 +24,7 @@
 		81AB951F25A4A3180007F2BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB951D25A4A3180007F2BE /* LaunchScreen.storyboard */; };
 		81AB952A25A4A3180007F2BE /* MCvsWILDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB952925A4A3180007F2BE /* MCvsWILDTests.swift */; };
 		81AB953525A4A3180007F2BE /* MCvsWILDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB953425A4A3180007F2BE /* MCvsWILDUITests.swift */; };
+		81BDBD3825B04D74008162BC /* inventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BDBD3725B04D74008162BC /* inventoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		81AB953025A4A3180007F2BE /* MCvsWILDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCvsWILDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB953425A4A3180007F2BE /* MCvsWILDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCvsWILDUITests.swift; sourceTree = "<group>"; };
 		81AB953625A4A3180007F2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81BDBD3725B04D74008162BC /* inventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inventoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				81AB951425A4A3170007F2BE /* SceneDelegate.swift */,
 				81AB951625A4A3170007F2BE /* ViewController.swift */,
 				81AB951825A4A3170007F2BE /* Main.storyboard */,
+				81BDBD3725B04D74008162BC /* inventoryTableViewCell.swift */,
 				81825CEC25A4C44A0029A060 /* statBar.swift */,
 				81825CE725A4B21C0029A060 /* gameViewController.swift */,
 				8120584D25AF879A00A95E9D /* InventoryViewController.swift */,
@@ -295,6 +298,7 @@
 				81AB951325A4A3170007F2BE /* AppDelegate.swift in Sources */,
 				8120584E25AF879A00A95E9D /* InventoryViewController.swift in Sources */,
 				8120585825AFA75E00A95E9D /* NewAlertController.swift in Sources */,
+				81BDBD3825B04D74008162BC /* inventoryTableViewCell.swift in Sources */,
 				81AB951525A4A3170007F2BE /* SceneDelegate.swift in Sources */,
 				818C30A725AC68A00017F886 /* Character.swift in Sources */,
 			);

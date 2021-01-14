@@ -38,6 +38,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var choice2_fear: StatBar!
     @IBOutlet weak var choice2_sleep: StatBar!
     
+    
+    
     var main = Character()
     
     var current = Event(pathEvent: "eventScenario")
@@ -80,14 +82,20 @@ class GameViewController: UIViewController {
     
     func isLoot(choice: Choice) {
         if (choice.getLoot() != "NULL") {
+            
             var loot = choice.getLoot().split(separator: "/").last!
             loot = loot.split(separator: ".").first!
             
             let newLoot = Loot(lootPath: String(loot))
             
+            
+            main.addStuff(newStuff: newLoot)
+            print(main.getCurrentItemCount())
+            
+            
             // Create AlertController
-            let alert = AlertController(title: "T'as trouvé ca ! Trop fort !", message: "Alors voyons voir... Oh ba dis tu as trouvé : " + newLoot.title, preferredStyle: .alert)
-            alert.setTitleImage(UIImage(named: String(newLoot.pathImg.split(separator: ".").first!)))
+            let alert = AlertController(title: "T'as trouvé ca ! Trop fort !", message: "Alors voyons voir... Oh ba dis tu as trouvé : " + newLoot.getTitle(), preferredStyle: .alert)
+            alert.setTitleImage(UIImage(named: newLoot.getImgPath()))
             // Add actions
             let action = UIAlertAction(title: "Yay", style: .cancel, handler: nil)
     
@@ -95,10 +103,7 @@ class GameViewController: UIViewController {
             alert.addAction(action)
             present(alert, animated: true, completion: nil)
 
-            print(newLoot.pathImg.split(separator: ".").first!)
-          
-            
-            main.addStuff(newStuff: newLoot)
+ 
         }
     }
     
@@ -120,16 +125,16 @@ class GameViewController: UIViewController {
         choice1_description.text = current.getChoice1().getTitle()
         choice2_description.text = current.getChoice2().getTitle()
         
-        choice1_health.setProgress(Float(abs(current.getChoice1().getHealth()))/10, animated: true)
-        choice1_food.setProgress(Float(abs(current.getChoice1().getFood()))/10, animated: true)
-        choice1_fear.setProgress(Float(abs(current.getChoice1().getFear()))/10, animated: true)
-        choice1_sleep.setProgress(Float(abs(current.getChoice1().getSleep()))/10, animated: true)
+        choice1_health.setProgress(Float(abs(current.getChoice1().getHealth())) / 20, animated: true)
+        choice1_food.setProgress(Float(abs(current.getChoice1().getFood())) / 20, animated: true)
+        choice1_fear.setProgress(Float(abs(current.getChoice1().getFear())) / 20, animated: true)
+        choice1_sleep.setProgress(Float(abs(current.getChoice1().getSleep())) / 20, animated: true)
         
         
-        choice2_health.setProgress(Float(abs(current.getChoice2().getHealth()))/10, animated: true)
-        choice2_food.setProgress(Float(abs(current.getChoice2().getFood()))/10, animated: true)
-        choice2_fear.setProgress(Float(abs(current.getChoice2().getFear()))/10, animated: true)
-        choice2_sleep.setProgress(Float(abs(current.getChoice2().getSleep()))/10, animated: true)
+        choice2_health.setProgress(Float(abs(current.getChoice2().getHealth())) / 20, animated: true)
+        choice2_food.setProgress(Float(abs(current.getChoice2().getFood())) / 20, animated: true)
+        choice2_fear.setProgress(Float(abs(current.getChoice2().getFear())) / 20, animated: true)
+        choice2_sleep.setProgress(Float(abs(current.getChoice2().getSleep())) / 20, animated: true)
     }
     
     

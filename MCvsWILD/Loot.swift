@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 
 class Loot {
-    var path: String = ""
-    var title: String = ""
-    var health: Int = 0
-    var food: Int = 0
-    var fear: Int = 0
-    var sleep: Int = 0
-    var addBagSpace: Int = 0
-    var pathImg: String = "Default.png"
+    private var path: String = ""
+    private var title: String = ""
+    private var health: Int = 0
+    private var food: Int = 0
+    private var fear: Int = 0
+    private var sleep: Int = 0
+    private var addBagSpace: Int = 0
+    private var pathImg: String = "Default.png"
     
     init(lootPath: String) {
         var text = ""
@@ -50,5 +50,25 @@ class Loot {
                     break
             }
         }
+    }
+    
+    func getTitle() -> String {
+        self.title
+    }
+    func getHealth() -> Int {
+        self.health
+    }
+    func getFood() -> Int {
+        self.food
+    }
+    func getFear() -> Int {
+        self.fear
+    }
+    func getSleep() -> Int {
+        self.sleep
+    }
+    
+    func getImgPath() -> String {
+        String(self.pathImg.split(separator: ".").first!)
     }
 }
