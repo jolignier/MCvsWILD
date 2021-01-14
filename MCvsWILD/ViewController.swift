@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         if let data = NSDataAsset(name: "HighScore")?.data {
             text = String(data: data, encoding: .utf8)!
         }
-        print(text)
+        
         best_score.text = "Best Score : \n" + text
     }
 
