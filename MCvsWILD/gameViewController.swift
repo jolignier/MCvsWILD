@@ -120,23 +120,28 @@ class GameViewController: UIViewController {
             
             
             if !main.addStuff(newStuff: newLoot) {
+                // Create AlertController
+                let alert = AlertController(title: "Trop lourd, tu repose l'objet et continu ton chemin ", message: "Ton inventaire est plein... Utilise un objet pour l'agrandir ", preferredStyle: .alert)
+                alert.setTitleImage(UIImage(named: newLoot.getImgPath()))
+                // Add actions
+                let action = UIAlertAction(title: "😭", style: .cancel, handler: nil)
+        
                 
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
             }
+            else {
             
-            
-            //TODO: earase some stuff if inventory is full
-            
-            
-            // Create AlertController
-            let alert = AlertController(title: "T'as trouvé ca ! Trop fort !", message: "Alors voyons voir... Oh ba dis tu as trouvé : " + newLoot.getTitle(), preferredStyle: .alert)
-            alert.setTitleImage(UIImage(named: newLoot.getImgPath()))
-            // Add actions
-            let action = UIAlertAction(title: "Yay", style: .cancel, handler: nil)
-    
-            
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil)
-
+                // Create AlertController
+                let alert = AlertController(title: "T'as trouvé ca ! Trop fort !", message: "Alors voyons voir... Oh ba dis tu as trouvé : " + newLoot.getTitle(), preferredStyle: .alert)
+                alert.setTitleImage(UIImage(named: newLoot.getImgPath()))
+                // Add actions
+                let action = UIAlertAction(title: "Yay", style: .cancel, handler: nil)
+        
+                
+                alert.addAction(action)
+                present(alert, animated: true, completion: nil)
+            }
  
         }
     }
