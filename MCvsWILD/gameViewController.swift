@@ -119,7 +119,7 @@ class GameViewController: UIViewController {
             let newLoot = Loot(lootPath: String(loot))
             
             
-            if !main.addStuff(newStuff: newLoot) {
+            if main.addStuff(newStuff: newLoot) {
                 // Create AlertController
                 let alert = AlertController(title: "Trop lourd, tu repose l'objet et continu ton chemin ", message: "Ton inventaire est plein... Utilise un objet pour l'agrandir ", preferredStyle: .alert)
                 alert.setTitleImage(UIImage(named: newLoot.getImgPath()))
