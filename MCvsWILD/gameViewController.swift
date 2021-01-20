@@ -84,24 +84,6 @@ class GameViewController: UIViewController {
 
             
             // Best score
-            /*
-            var best = ""
-            if let data = NSDataAsset(name: "HighScore")?.data {
-                best = String(data: data, encoding: .utf8)!
-            }
-            
-            let bestScore = Int(best)!
-            
-            if (main.getScore() > bestScore) {
-                do {
-                    try String(main.getScore()).write(toFile: "HighScore", atomically: false, encoding: .utf8)
-                }
-                catch {
-                    
-                }
-                
-            }
-            */
             
             main.saveScore()
             
@@ -137,7 +119,10 @@ class GameViewController: UIViewController {
             let newLoot = Loot(lootPath: String(loot))
             
             
-            main.addStuff(newStuff: newLoot)
+            if !main.addStuff(newStuff: newLoot) {
+                
+            }
+            
             
             //TODO: earase some stuff if inventory is full
             
