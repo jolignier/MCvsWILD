@@ -99,6 +99,15 @@ class Character {
         return death
     }
     
+    func saveScore() {
+        
+        let bestScore = Score(context: AppDelegate.viewContext)
+        bestScore.name = name
+        bestScore.score = Int16(score)
+        try? AppDelegate.viewContext.save()
+        
+    }
+    
     
     func addHealth(toAdd: Int) {
         if (toAdd + self.health > MAXSTAT) {

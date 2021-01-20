@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -20,14 +21,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var text = ""
-        if let data = NSDataAsset(name: "HighScore")?.data {
-            text = String(data: data, encoding: .utf8)!
+        
+        let request: NSFetchRequest<Score> = Score.fetchRequest()
+        guard var scores = try? AppDelegate.viewContext.fetch(request) else {
+            return
         }
         
-        best_score.text = "Best Score : \n" + text
+        if scores.isEmpty {
+            best_score.text = "Pas encore de meilleur score"
+        }
+        else {
+            
+            scores.sort(by: {$0.score > $1.score})
+            let bestScore = scores.first!
+            
+            best_score.text = "Meilleur score :" + String(bestScore.score) + "h"
+            best_score.text! += "\n" + "realisé par : " + bestScore.name!
+    
+        }
     }
-
 }
 
 

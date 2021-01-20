@@ -84,6 +84,7 @@ class GameViewController: UIViewController {
 
             
             // Best score
+            /*
             var best = ""
             if let data = NSDataAsset(name: "HighScore")?.data {
                 best = String(data: data, encoding: .utf8)!
@@ -100,7 +101,9 @@ class GameViewController: UIViewController {
                 }
                 
             }
+            */
             
+            main.saveScore()
             
             alert.addAction(action)
             present(alert, animated: true, completion: nil)

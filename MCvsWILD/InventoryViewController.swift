@@ -103,12 +103,14 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
             })
             
             // Best score
+            /*
             var best = ""
             if let data = NSDataAsset(name: "HighScore")?.data {
                 best = String(data: data, encoding: .utf8)!
             }
             
             let bestScore = Int(best)!
+            
             
             if (main!.getScore() > bestScore) {
                 do {
@@ -119,6 +121,9 @@ class InventoryViewController: UIViewController, UITableViewDataSource, UITableV
                 }
                 
             }
+            */
+ 
+            main!.saveScore()
             
             alert.addAction(action)
             present(alert, animated: true, completion: nil)

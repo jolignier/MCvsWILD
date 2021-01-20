@@ -24,6 +24,7 @@
 		81AB951F25A4A3180007F2BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB951D25A4A3180007F2BE /* LaunchScreen.storyboard */; };
 		81AB952A25A4A3180007F2BE /* MCvsWILDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB952925A4A3180007F2BE /* MCvsWILDTests.swift */; };
 		81AB953525A4A3180007F2BE /* MCvsWILDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB953425A4A3180007F2BE /* MCvsWILDUITests.swift */; };
+		81B7D2BC25B8197E006DC606 /* MCvsWILD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81B7D2BA25B8197E006DC606 /* MCvsWILD.xcdatamodeld */; };
 		81BDBD3825B04D74008162BC /* inventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BDBD3725B04D74008162BC /* inventoryTableViewCell.swift */; };
 		81BDBD3D25B09A9F008162BC /* death.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BDBD3C25B09A9F008162BC /* death.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		81AB953025A4A3180007F2BE /* MCvsWILDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCvsWILDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB953425A4A3180007F2BE /* MCvsWILDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCvsWILDUITests.swift; sourceTree = "<group>"; };
 		81AB953625A4A3180007F2BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81B7D2BB25B8197E006DC606 /* MCvsWILD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MCvsWILD.xcdatamodel; sourceTree = "<group>"; };
 		81BDBD3725B04D74008162BC /* inventoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inventoryTableViewCell.swift; sourceTree = "<group>"; };
 		81BDBD3C25B09A9F008162BC /* death.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = death.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				81AB951D25A4A3180007F2BE /* LaunchScreen.storyboard */,
 				81AB952025A4A3180007F2BE /* Info.plist */,
 				819AEFC225A70C1A00C23A58 /* Event.swift */,
+				81B7D2BA25B8197E006DC606 /* MCvsWILD.xcdatamodeld */,
 				813817E125ACBBE400CDA636 /* Choice.swift */,
 				8120585225AFA69600A95E9D /* NewPopUp.swift */,
 				8120585725AFA75E00A95E9D /* NewAlertController.swift */,
@@ -303,6 +306,7 @@
 				8120585825AFA75E00A95E9D /* NewAlertController.swift in Sources */,
 				81BDBD3825B04D74008162BC /* inventoryTableViewCell.swift in Sources */,
 				81AB951525A4A3170007F2BE /* SceneDelegate.swift in Sources */,
+				81B7D2BC25B8197E006DC606 /* MCvsWILD.xcdatamodeld in Sources */,
 				81BDBD3D25B09A9F008162BC /* death.swift in Sources */,
 				818C30A725AC68A00017F886 /* Character.swift in Sources */,
 			);
@@ -637,6 +641,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		81B7D2BA25B8197E006DC606 /* MCvsWILD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				81B7D2BB25B8197E006DC606 /* MCvsWILD.xcdatamodel */,
+			);
+			currentVersion = 81B7D2BB25B8197E006DC606 /* MCvsWILD.xcdatamodel */;
+			path = MCvsWILD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 81AB950725A4A3170007F2BE /* Project object */;
 }
