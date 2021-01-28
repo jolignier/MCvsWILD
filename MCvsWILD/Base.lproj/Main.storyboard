@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -218,8 +218,11 @@
                                                         <rect key="frame" x="0.0" y="12.666666666666657" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y5t-Zb-qRY" userLabel="health_bar">
-                                                        <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="27.666666666666657" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemRedColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="bxL-Tc-PWe"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -231,8 +234,11 @@
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cO2-Xw-fSs" userLabel="food_bar">
-                                                        <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="27.666666666666657" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="lmB-oL-3SO"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -248,8 +254,11 @@
                                                         <rect key="frame" x="0.0" y="12.666666666666657" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bRM-oN-2a4" userLabel="fear_bar">
-                                                        <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="27.666666666666657" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="GpC-X1-ryO"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -260,8 +269,11 @@
                                                         <rect key="frame" x="0.0" y="12.666666666666657" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qHq-Ra-O4R" userLabel="sleep_bar">
-                                                        <rect key="frame" x="56" y="35.666666666666657" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="27.666666666666657" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="6fY-I7-WNg"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -309,8 +321,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vfM-61-tRb" userLabel="health_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemRedColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="pua-ur-615"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -321,8 +336,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ICZ-pt-Xcm" userLabel="food_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="rtx-Mv-KnU"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -333,8 +351,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U5l-WV-FPT" userLabel="fear_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="VOt-Tz-wYn"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -345,8 +366,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ytO-xy-x8b" userLabel="sleep_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="1G8-zc-O7X"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -374,8 +398,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Bp-ho-zjV" userLabel="health_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemRedColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="FO5-N8-298"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -386,8 +413,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PlO-ZP-2dK" userLabel="food_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="DDg-Bs-qPk"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -398,8 +428,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XxF-OY-iDX" userLabel="fear_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="3Jk-9t-r4W"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -410,8 +443,11 @@
                                                         <rect key="frame" x="0.0" y="3" width="50" height="50"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-wT-g20" userLabel="sleep_bar">
-                                                        <rect key="frame" x="56" y="26" width="104" height="4"/>
+                                                        <rect key="frame" x="56" y="18" width="104" height="20"/>
                                                         <color key="tintColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="3Rd-eH-CWk"/>
+                                                        </constraints>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
@@ -696,8 +732,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="SXE-q5-gUt"/>
         <segue reference="DoW-og-WGa"/>
-        <segue reference="Kba-pL-nIb"/>
+        <segue reference="8UA-yO-Cti"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backpack" width="80" height="80"/>
